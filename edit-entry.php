@@ -23,6 +23,7 @@ if (!$entry) {
 <head>
   <meta charset="UTF-8">
   <title>Eintrag bearbeiten – Heimzeit</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -33,33 +34,33 @@ if (!$entry) {
   </a>
 </header>
 
-<nav class="nav-bar">
-  <a href="dashboard.php">🏠 Dashboard</a>
-  <a href="dashboard.php#eintrag">➕ Neuer Eintrag</a>
-  <a href="dashboard.php#todos">✅ To-Do's</a>
-  <a href="view-entries.php">👁️ Bewohneransicht</a>
+<nav class="nav-bar" aria-label="Navigation">
+  <a href="dashboard.php"> Dashboard</a>
+  <a href="dashboard.php#eintrag"> Neuer Eintrag</a>
+  <a href="dashboard.php#todos"> To-Do's</a>
+  <a href="view-entries.php"> Bewohneransicht</a>
 </nav>
 
 <main class="dashboard-main">
   <section>
     <h2>Eintrag bearbeiten</h2>
     <form action="update-entry.php" method="POST">
-      <input type="hidden" name="id" value="<?= $entry['id'] ?>">
+      <input type="hidden" name="id" value="<?= htmlspecialchars($entry['id']) ?>">
 
       <label for="datum">Datum:</label>
-      <input type="date" id="datum" name="datum" value="<?= $entry['datum'] ?>" required>
+      <input type="date" id="datum" name="datum" value="<?= htmlspecialchars($entry['datum']) ?>" required>
 
       <label for="startzeit">Beginn:</label>
-      <input type="time" id="startzeit" name="startzeit" value="<?= $entry['startzeit'] ?>" required>
+      <input type="time" id="startzeit" name="startzeit" value="<?= htmlspecialchars($entry['startzeit']) ?>" required>
 
       <label for="endzeit">Ende:</label>
-      <input type="time" id="endzeit" name="endzeit" value="<?= $entry['endzeit'] ?>" required>
+      <input type="time" id="endzeit" name="endzeit" value="<?= htmlspecialchars($entry['endzeit']) ?>" required>
 
       <label for="titel">Titel:</label>
       <input type="text" id="titel" name="titel" value="<?= htmlspecialchars($entry['titel']) ?>" required>
 
       <label for="ort">Ort:</label>
-      <input type="text" id="ort" name="ort" value="<?= htmlspecialchars($entry['ort']) ?>">
+      <input type="text" id="ort" name="ort" value="<?= htmlspecialchars($entry['ort'] ?? '') ?>">
 
       <label for="kategorie">Kategorie:</label>
       <select id="kategorie" name="kategorie">
@@ -73,7 +74,7 @@ if (!$entry) {
       </select>
 
       <label for="beschreibung">Beschreibung:</label>
-      <textarea id="beschreibung" name="beschreibung" rows="4"><?= htmlspecialchars($entry['beschreibung']) ?></textarea>
+      <textarea id="beschreibung" name="beschreibung" rows="4"><?= htmlspecialchars($entry['beschreibung'] ?? '') ?></textarea>
 
       <button type="submit">Änderungen speichern</button>
     </form>

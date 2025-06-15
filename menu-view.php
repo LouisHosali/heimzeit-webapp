@@ -20,11 +20,10 @@ require 'config.php';
 </header>
 
 <nav class="nav-bar">
-  <a href="dashboard.php">🏠 Dashboard</a>
-  <a href="dashboard.php#eintrag">➕ Neuer Eintrag</a>
-  <a href="dashboard.php#todos">✅ To-Do's</a>
-  <a href="view-entries.php">👁️ Bewohneransicht</a>
-  <a href="menu-view.php">🍽️ Menü</a>
+  <a href="dashboard.php"> Dashboard</a>
+  <a href="entry.php"> Neuer Eintrag</a>
+  <a href="todos.php"> To-Do's</a>
+  <a href="view-entries.php"> Bewohneransicht</a>
 </nav>
 
 <main class="dashboard-main">
@@ -43,12 +42,25 @@ require 'config.php';
       foreach ($menues as $eintrag) {
         echo "<article class='kachel menü'>";
         echo "<div class='kategorie-icon'>🍽️</div>";
-        echo "<h3>" . htmlspecialchars($eintrag['titel']) . "</h3>";
-        echo "<time datetime='{$eintrag['datum']}'>" . date("l, d.m.Y", strtotime($eintrag['datum'])) . "</time>";
-        if ($eintrag['beschreibung']) {
+
+        // Titel
+        if (!empty($eintrag['titel'])) {
+          echo "<h3>" . htmlspecialchars($eintrag['titel']) . "</h3>";
+        }
+
+        // Datum
+        if (!empty($eintrag['datum'])) {
+          echo "<time datetime='" . htmlspecialchars($eintrag['datum']) . "'>";
+          echo date("l, d.m.Y", strtotime($eintrag['datum']));
+          echo "</time>";
+        }
+
+        // Beschreibung
+        if (!empty($eintrag['beschreibung'])) {
           echo "<p>" . nl2br(htmlspecialchars($eintrag['beschreibung'])) . "</p>";
         }
-        echo "<a href='edit-entry.php?id={$eintrag['id']}'>✏️ Bearbeiten</a>";
+
+        echo "<a href='edit-entry.php?id=" . urlencode($eintrag['id']) . "'>✏️ Bearbeiten</a>";
         echo "</article>";
       }
       echo "</div>";

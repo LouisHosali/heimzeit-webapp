@@ -7,12 +7,24 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <h1>Heimzeit</h1>
-    <p id="heute"></p>
+
+  <!-- Logo/Header -->
+  <header class="logo-header">
+    <a href="dashboard.php">
+      <img src="Assets/Logo.png" alt="Heimzeit Logo">
+    </a>
   </header>
 
-  <main>
+  <!-- Hauptinhalt -->
+  <main class="start-main">
+
+    <!-- Titel & Datum -->
+    <header style="text-align:center; margin-bottom: 2rem;">
+      <h1>Heimzeit</h1>
+      <p id="heute" style="font-weight: 500; color: #4B5563;"></p>
+    </header>
+
+    <!-- Tagesprogramm -->
     <section id="tagesprogramm">
       <h2>Heute im Programm</h2>
       <div class="kachel-container">
@@ -20,6 +32,7 @@
       </div>
     </section>
 
+    <!-- Menüplan -->
     <section id="menueplan">
       <h2>Menüplan</h2>
       <div class="menu">
@@ -27,11 +40,14 @@
         <p><strong>Abend:</strong> <span id="abend"></span></p>
       </div>
     </section>
+
+    <!-- Login-Link -->
+    <div style="text-align: center; margin-top: 3rem;">
+      <a href="login.html" style="font-weight:bold; color:#1E40AF;">🔐 Login für Pflegepersonal</a>
+    </div>
+
   </main>
 
   <script src="script.js" defer></script>
 </body>
 </html>
-<p style="text-align:center; margin-top:2rem;">
-  <a href="login.html" style="font-weight:bold; color:#1E40AF;">Login für Pflegepersonal</a>
-</p>

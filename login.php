@@ -1,4 +1,3 @@
-<?php include 'auth-check.php'; ?>
 <?php
 session_start();
 require 'config.php';

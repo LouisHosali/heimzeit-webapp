@@ -308,3 +308,52 @@ button:hover {
     font-size: 1rem;
   }
 }
+.start-main {
+  max-width: 720px;
+  margin: 2rem auto;
+  padding: 1rem;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+}
+.start-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+  max-width: 600px;
+  margin: 3rem auto;
+  text-align: center;
+}
+
+.start-card h1 {
+  color: #1E40AF;
+  margin-bottom: 0.5rem;
+}
+
+.start-card .sub {
+  color: #4B5563;
+  font-size: 1.1rem;
+  margin-top: 1rem;
+}
+
+.action-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.cta-button {
+  background-color: #F59E0B;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.cta-button.secondary {
+  background-color: #E5E7EB;
+  color: #1E40AF;
+}
