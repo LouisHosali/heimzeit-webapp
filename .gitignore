@@ -1,0 +1,16 @@
+# SENSITIVE FILES
+config.php
+sftp.json
+.env
+
+# SYSTEM FILES
+.DS_Store
+Thumbs.db
+.vscode/
+node_modules/
+
+# BACKUPS / TEMP
+*.log
+*.zip
+*.bak
+*.tmp

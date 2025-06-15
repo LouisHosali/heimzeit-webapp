@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>Registrieren – Heimzeit</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="logo-header" style="text-align: center; padding: 2rem 0;">
+  <a href="dashboard.php">
+    <img src="Assets/Logo.png" alt="Heimzeit Logo" style="height: 80px;">
+  </a>
+</header>
+
+<main class="dashboard-main">
+  <section class="login-wrapper" aria-labelledby="register-heading">
+    <h2 id="register-heading">Registrieren</h2>
+    <form action="register.php" method="POST" class="login-form">
+      <label for="email">E-Mail-Adresse</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="password">Passwort</label>
+      <input type="password" id="password" name="password" required>
+
+      <button type="submit" aria-label="Registrieren">Registrieren</button>
+    </form>
+
+    <p style="margin-top: 1rem;">Schon registriert? <a href="login.html">Hier anmelden</a></p>
+  </section>
+</main>
+
+</body>
+</html>
