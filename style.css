@@ -386,3 +386,16 @@ button:hover {
 .nav-logout .logout-button:hover {
   background-color: #F3F4F6;
 }
+.logout-link {
+  margin-left: auto;
+  background-color: #F59E0B;
+  color: white;
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.logout-link:hover {
+  background-color: #d97706;
+}

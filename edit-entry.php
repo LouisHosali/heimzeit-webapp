@@ -34,11 +34,12 @@ if (!$entry) {
   </a>
 </header>
 
-<nav class="nav-bar" aria-label="Navigation">
-  <a href="dashboard.php"> Dashboard</a>
-  <a href="dashboard.php#eintrag"> Neuer Eintrag</a>
-  <a href="dashboard.php#todos"> To-Do's</a>
-  <a href="view-entries.php"> Bewohneransicht</a>
+<nav class="nav-bar">
+  <a href="dashboard.php">Dashboard</a>
+  <a href="entry.php">Neuer Eintrag</a>
+  <a href="todos.php">To-Do's</a>
+  <a href="view-entries.php">Bewohneransicht</a>
+  <a href="logout.php" class="logout-link">Logout</a>
 </nav>
 
 <main class="dashboard-main">

@@ -16,10 +16,11 @@
 </header>
 
 <nav class="nav-bar">
-  <a href="dashboard.php"> Dashboard</a>
-  <a href="entry.php"> Neuer Eintrag</a>
-  <a href="todos.php"> To-Do's</a>
-  <a href="view-entries.php"> Bewohneransicht</a>
+  <a href="dashboard.php">Dashboard</a>
+  <a href="entry.php">Neuer Eintrag</a>
+  <a href="todos.php">To-Do's</a>
+  <a href="view-entries.php">Bewohneransicht</a>
+  <a href="logout.php" class="logout-link">Logout</a>
 </nav>
 
 <main class="dashboard-main">
