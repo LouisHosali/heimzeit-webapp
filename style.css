@@ -357,3 +357,32 @@ button:hover {
   background-color: #E5E7EB;
   color: #1E40AF;
 }
+.nav-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1E40AF;
+  padding: 0.75rem 1.5rem;
+  flex-wrap: wrap;
+}
+
+.nav-links a {
+  margin-right: 1rem;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.nav-logout .logout-button {
+  background-color: white;
+  color: #1E40AF;
+  padding: 0.4rem 1rem;
+  border-radius: 6px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.nav-logout .logout-button:hover {
+  background-color: #F3F4F6;
+}
